@@ -1,0 +1,61 @@
+/* Stili per il form */
+.form-group {
+    margin-bottom: 20px;
+  }
+  label {
+    font-weight: bold;
+  }
+  body {
+    background-image: url('https://4kwallpapers.com/images/wallpapers/macos-monterey-stock-blue-light-layers-5k-5120x2880-5898.jpg');
+    background-size: cover; 
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  /* Stili per i campi di input */
+  input[type="email"],
+  input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 3px solid #ccc;
+    border-radius: 100px;
+  }
+  .lock-icon {
+    width: 32px;
+    height: auto;
+    margin-right: 10px;
+    position: relative;
+    top: 5px;
+  }
+  .text-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .center-vertically {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+  .login-box {
+    background-color: #84aeda;
+    border: 1px solid #ccc;
+    padding: 50px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+  }
+  button[type="submit"] {
+    background-color: #4944db;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 100px;
+    cursor: pointer;
+  }
+  h2 {
+    font-size: 24px;
+    color: #333;
+  }
+  

@@ -9,6 +9,7 @@ import { DipendenteService } from 'src/service/DipendenteService/dipendente.serv
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent {
+  lockImageUrl: string = 'https://cdn-icons-png.flaticon.com/512/7605/7605686.png';
   email: string = '';
   password: string = '';
   dipendente: Dipendente= new Dipendente;
@@ -16,14 +17,12 @@ export class LoginComponent {
   constructor(private dipendenteService: DipendenteService,private router: Router) {}
 
   onSubmit() {
-    // Esegui l'azione di login quing
     const credentials = {
       email: this.email,
       password: this.password
     };
 
     this.dipendenteService.login(credentials).subscribe(response => {
-      // Gestisci la risposta del server o reindirizza l'utente
       console.log('Risposta dal server:', response);
     });
   }
