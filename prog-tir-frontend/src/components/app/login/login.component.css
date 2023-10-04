@@ -40,14 +40,14 @@
     height: 100%;
   }
   .login-box {
-    background-color: #84aeda;
-    border: 1px solid #ccc;
+    background-color: #88b2fe;
+    border: 1px solid #131d72;
     padding: 50px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border-radius: 5px;
+    border-radius: 10px;
   }
   button[type="submit"] {
-    background-color: #4944db;
+    background-color: #131d72;
     color: #fff;
     padding: 10px 20px;
     border: none;
