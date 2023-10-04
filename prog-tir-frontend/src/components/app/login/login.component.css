@@ -19,6 +19,11 @@
     border: 3px solid #ccc;
     border-radius: 100px;
   }
+  input[type="email"],
+  input[type="password"]:focus{
+    outline: none;
+  } 
+
   .lock-icon {
     width: 32px;
     height: auto;

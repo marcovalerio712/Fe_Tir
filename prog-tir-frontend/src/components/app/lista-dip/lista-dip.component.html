@@ -1,7 +1,54 @@
-<p>lista-dip works!</p>
-<ul>
-    <li *ngFor="let dipendente of dipendenti">
-      {{ dipendente.nome }} {{ dipendente.cognome }}
-    </li>
-  </ul>
+
+<body>
   
+
+<h1>Dipendenti</h1>
+<table>
+
+  <thead>
+    <td>ID</td>
+    <td>Nome</td>
+    <td>Cognome</td>
+    <td>Codice Fiscale</td>
+    <td>Email</td>
+    <td>Password</td>
+    <td>Telefono</td>
+    <td>Ruolo</td>
+    <td>Registrato</td>
+    <td>Attivo</td>
+  </thead>
+
+  <tbody>
+    <tr *ngFor="let dipendente of dipendenti">
+      <td>{{dipendente.id}}</td>
+      <td>{{dipendente.nome}}</td>
+      <td>{{dipendente.cognome }}</td>
+      <td>{{dipendente.cf}}</td>
+      <td>{{dipendente.email}}</td>
+      <td>{{dipendente.password}}</td>
+      <td>{{dipendente.telefono}}</td>
+      <td>{{dipendente.ruolo?.anzianita}}</td>
+      <td>{{dipendente.registrato ? 'Attivo' : 'Licenziato' }} </td>
+      <td>{{dipendente.attivo ? 'Attivo' : 'Non attivo'}} </td>
+
+      
+    </tr>
+  </tbody>
+
+
+
+
+
+
+
+</table> 
+
+
+</body>
+
+
+
+
+  
+
+
