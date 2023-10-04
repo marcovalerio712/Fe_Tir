@@ -1,1 +1,12 @@
-<p>login works!</p>
+<h2>Login</h2>
+<form (ngSubmit)="onSubmit()">
+  <div class="form-group">
+    <label for="email">Email</label>
+    <input type="email" id="email" name="email" [(ngModel)]="dipendente.email" class="form-control" required>
+  </div>
+  <div class="form-group">
+    <label for="password">Password</label>
+    <input type="password" id="password" name="password" [(ngModel)]="dipendente.password" class="form-control" required>
+  </div>
+  <button type="submit" class="btn btn-primary">Login</button>
+</form>
