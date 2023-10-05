@@ -8,6 +8,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { ListaDipComponent } from './lista-dip/lista-dip.component';
 import { RegistrazioneComponent } from './registrazione/registrazione.component';
+import { UpdateDipComponent } from './update-dip/update-dip.component';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { RegistrazioneComponent } from './registrazione/registrazione.component'
     AppComponent,
     LoginComponent,
     ListaDipComponent,
-    RegistrazioneComponent
+    RegistrazioneComponent,
+    UpdateDipComponent
   ],
   imports: [
     BrowserModule,

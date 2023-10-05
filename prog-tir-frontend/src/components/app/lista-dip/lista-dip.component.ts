@@ -8,7 +8,7 @@ import { DipendenteService } from 'src/service/DipendenteService/dipendente.serv
 })
 export class ListaDipComponent {
   dipendenti?: any[];
-
+  showPopup: boolean = false;
   constructor(private dipendenteService : DipendenteService){}
   ngOnInit() {
     // Chiamata al metodo getAllDipendenti del servizio
@@ -20,4 +20,14 @@ export class ListaDipComponent {
       }
     );
   }
+
+  openPopup(){
+    this.showPopup = true;
+  }
+  closePopup(): void {
+    this.showPopup = false; // Imposta la variabile showPopup per chiudere il popup
+  }
+  
+  
+  
 }

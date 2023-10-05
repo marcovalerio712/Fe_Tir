@@ -16,7 +16,6 @@
     <td>Ruolo</td>
     <td>Registrato</td>
     <td>Attivo</td>
-    <td><button class="aggiungi">+</button> </td>
   </thead>
 
   <tbody>
@@ -29,9 +28,9 @@
       <td>{{dipendente.password}}</td>
       <td>{{dipendente.telefono}}</td>
       <td>{{dipendente.ruolo?.anzianita}}</td>
-      <td>{{dipendente.registrato ? 'Attivo' : 'Licenziato' }} </td>
-      <td>{{dipendente.attivo ? 'Attivo' : 'Non attivo'}} </td>
-      <td><button class="modifica"><img src="assets/images/modifica.png" alt="matita di modifica"> </button> <button class="elimina">x</button> </td>
+      <td>{{dipendente.registrato ? 'Si' : 'No' }} </td>
+      <td>{{dipendente.attivo ? 'Attivo' : 'Inattivo'}} </td>
+      <td><button (click)="openPopup()" class="modifica"><img src="assets/images/modifica.png" alt="matita di modifica"> </button> <button class="elimina">x</button> </td>
 
       
     </tr>
@@ -46,9 +45,12 @@
 </table> 
 
 
+
 </body>
 
-
+<ng-container *ngIf="showPopup">
+  <app-update-dip (closePopup)="closePopup()"></app-update-dip>
+</ng-container>
 
 
   
