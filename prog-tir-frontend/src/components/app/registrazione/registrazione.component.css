@@ -11,19 +11,49 @@
     background-repeat: no-repeat;
     background-position: center;
   }
-  /* Stili per i campi di input */
+  input[type="id"],
+  input[type="nome"], 
+  input[type="cognome"],
+  input[type="codicef"],
   input[type="email"],
-  input[type="password"] {
+  input[type="password"],
+  input[type="telefono"],
+  input[type="ruolo"]  {
     width: 100%;
     padding: 10px;
     border: 2px solid #131d72;
     border-radius: 100px;
   }
+  input[type="id"],
+  input[type="nome"], 
+  input[type="cognome"],
+  input[type="codicef"],
   input[type="email"],
-  input[type="password"]:focus{
+  input[type="password"],
+  input[type="telefono"]:focus{
     outline: none;
   } 
-
+  .custom-select {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #131d72;
+    border-radius: 100px;
+    background-color: #fff; 
+  }
+  .custom-select::-ms-expand {
+    display: none;
+  }
+  .custom-select::after {
+    content: '\25BC'; 
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+  }
+  .custom-select:focus {
+    border-color: #007bff; 
+    outline: none;
+  }  
   .lock-icon {
     width: 32px;
     height: auto;
@@ -54,7 +84,7 @@
   button[type="submit"] {
     background-color: #131d72;
     color: #fff;
-    padding: 15px 20px; 
+    padding: 15px 50px; 
     border: none;
     border-radius: 100px;
     cursor: pointer;

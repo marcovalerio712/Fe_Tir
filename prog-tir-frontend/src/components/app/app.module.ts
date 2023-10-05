@@ -7,13 +7,15 @@ import { LoginComponent } from './login/login.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { ListaDipComponent } from './lista-dip/lista-dip.component';
+import { RegistrazioneComponent } from './registrazione/registrazione.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    ListaDipComponent
+    ListaDipComponent,
+    RegistrazioneComponent
   ],
   imports: [
     BrowserModule,

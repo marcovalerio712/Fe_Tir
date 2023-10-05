@@ -1,0 +1,51 @@
+<body>
+    <div class="container text-center">
+      <div class="row">
+        <div class="col-md-6 offset-md-3">
+          <h2 style="display: block; text-align: center;">Registration<img [src]="registerUrl" alt="Lock Icon" class="lock-icon"></h2>
+          <form (ngSubmit)="onSubmit()">
+            <div class="login-box"> 
+                <div class="form-group text-center">
+                    <label for="id" style="display: block; text-align: center;"></label>
+                    <input type="id" id="id" name="id" class="form-control" required placeholder="Id">
+                </div>
+                  <div class="form-group text-center">
+                    <label for="nome" style="display: block; text-align: center;"></label>
+                    <input type="nome" id="nome" name="nome" class="form-control" required placeholder="Nome">
+                </div>
+                  <div class="form-group text-center">
+                    <label for="cognome" style="display: block; text-align: center;"></label>
+                    <input type="cognome" id="cognome" name="cognome" class="form-control" required placeholder="Cognome">
+                </div>
+                  <div class="form-group text-center">
+                    <label for="codicef" style="display: block; text-align: center;"></label>
+                    <input type="codicef" id="codicef" name="codicef" class="form-control" required placeholder="CodiceFiscale">
+                </div>
+                  <div class="form-group text-center">
+                    <label for="email" style="display: block; text-align: center;"></label>
+                    <input type="email" id="email" name="email" class="form-control" required placeholder="Email">
+                </div>
+                  <div class="form-group text-center">
+                    <label for="password" style="display: block; text-align: center;"></label>
+                    <input type="password" id="password" name="password" class="form-control" required placeholder="Password">
+                </div>                              
+                  <div class="form-group text-center">
+                    <label for="telefono" style="display: block; text-align: center;"></label>
+                    <input type="telefono" id="telefono" name="telefono" class="form-control" required placeholder="Telefono">
+                </div>
+                    <div class="form-group text-center">
+                    <select id="ruolo" name="ruolo" class="form-control custom-select">
+                        <option value="Ruolo1">Junior</option>
+                        <option value="Ruolo2">Middle</option>
+                        <option value="Ruolo3">Senior</option>
+                    </select>
+                </div>
+            <div class="center-vertically">
+              <button type="submit" class="btn btn-primary">Register</button>
+            </div>
+          </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    </body>
