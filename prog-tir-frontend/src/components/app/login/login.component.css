@@ -5,12 +5,7 @@
   label {
     font-weight: bold;
   }
-  body {
-    background-image: url('https://4kwallpapers.com/images/wallpapers/macos-monterey-stock-blue-light-layers-5k-5120x2880-5898.jpg');
-    background-size: cover; 
-    background-repeat: no-repeat;
-    background-position: center;
-  }
+ 
   /* Stili per i campi di input */
   input[type="email"],
   input[type="password"] {

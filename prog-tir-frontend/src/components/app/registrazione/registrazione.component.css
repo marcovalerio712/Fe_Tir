@@ -5,13 +5,6 @@
   label {
     font-weight: bold;
   }
-  body {
-    background-image: url('https://4kwallpapers.com/images/wallpapers/macos-monterey-stock-blue-light-layers-5k-5120x2880-5898.jpg');
-    background-size: cover; 
-    background-repeat: no-repeat;
-    background-position: center;
-  }
-  input[type="id"],
   input[type="nome"], 
   input[type="cognome"],
   input[type="codicef"],
@@ -24,7 +17,7 @@
     border: 2px solid #131d72;
     border-radius: 100px;
   }
-  input[type="id"],
+
   input[type="nome"], 
   input[type="cognome"],
   input[type="codicef"],
