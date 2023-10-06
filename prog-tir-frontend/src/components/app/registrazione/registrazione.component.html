@@ -3,7 +3,25 @@
       <div class="row">
         <div class="col-md-6 offset-md-3">
           <h2 style="display: block; text-align: center;">Registration<img [src]="registerUrl" alt="Lock Icon" class="lock-icon"></h2>
-          <form (ngSubmit)="onSubmit()">
+          <form (ngSubmit)="onSubmit()">           
+            <label for="nome"> Nome <br> <input name="nome" type="text" required [(ngModel)]="dipendente!.nome" value="{{dipendente?.nome}}"></label> <br>
+            <label for="cognome">Cognome <br><input name="cognome" type="text" required [(ngModel)]="dipendente!.cognome" value="{{dipendente?.cognome}}"></label><br>
+            <label for="cf"> Codice Fiscale <br> <input name="cf" type="text" required [(ngModel)]="dipendente!.cf" value="{{dipendente?.cf}}"> </label> <br>
+            <label for="email">Email <br> <input name="email" type="email" required [(ngModel)]="dipendente!.email" value="{{dipendente?.email}}"></label><br>
+            <label for="password"> Password <br> <input name="password" required [(ngModel)]="dipendente!.password" value="{{dipendente?.password}}"></label><br>
+            <label for="telefono"> Telefono <br> <input name="telefono" type="text" required [(ngModel)]="dipendente!.telefono" value="{{dipendente?.telefono}}"></label><br>
+            <label for="ruolo">Ruolo<br>
+                <select name="ruolo">
+                    <ng-container *ngFor="let ruolo of listaRuoli">
+                    <option [ngValue]="ruolo" >{{ruolo.anzianita}}</option>               
+                    </ng-container>
+                </select>
+            </label>
+            <div class="div-button">
+                <button class="submit" type="submit"> Salva </button>
+            </div>  
+        </form>
+          <!--<form (ngSubmit)="onSubmit()">
             <div class="login-box"> 
                   <div class="form-group text-center">
                     <label for="nome" style="display: block; text-align: center;"></label>
@@ -34,13 +52,14 @@
                         <option value="Ruolo1">Junior</option>
                         <option value="Ruolo2">Middle</option>
                         <option value="Ruolo3">Senior</option>
+                        <option value="Ruolo4">HR</option>
                     </select>
                 </div>
-            <div class="center-vertically">
+              <div class="center-vertically">
               <button type="submit" class="btn btn-primary">Register</button>
             </div>
           </div>
-          </form>
+          </form>-->
         </div>
       </div>
     </div>
