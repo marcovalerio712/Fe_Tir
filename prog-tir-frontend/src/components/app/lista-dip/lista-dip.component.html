@@ -29,7 +29,8 @@
       <td>{{dipendente.ruolo?.anzianita}}</td>
       <td>{{dipendente.registrato ? 'Si' : 'No' }} </td>
       <td>{{dipendente.attivo ? 'Attivo' : 'Inattivo'}} </td>
-      <td><button (click)="openPopup(dipendente)" class="modifica"><img src="assets/images/modifica.png" alt="matita di modifica"> </button> <button class="elimina">x</button> </td>
+      <td><button (click)="openPopup(dipendente)" class="modifica"><img src="assets/images/modifica.png" alt="matita di modifica"> </button> 
+      <button (click)="deleteDip(dipendente)" class="elimina">x</button> </td>
 
       
     </tr>

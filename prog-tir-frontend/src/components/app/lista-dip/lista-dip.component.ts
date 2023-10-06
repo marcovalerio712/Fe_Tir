@@ -42,6 +42,16 @@ export class ListaDipComponent implements OnInit{
     this.showPopup = false;
   }
   
+  deleteDip(dipendente : Dipendente){
+    console.log(dipendente)
+    this.dipendenteService.deleteDipendente(dipendente!.id!).subscribe({
+      error: (error: any) => {
+        console.log(error)
+       ;
+      }
+    })
+     window.location.reload
+  }
   
   
 }
