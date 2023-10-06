@@ -5,20 +5,30 @@
     </div>
         <h2>Modifica dipendente</h2>
         <form>
-            <label for="nome">Nome <br> <input type="text"></label> <br>
-            <label for="cognome">Cognome <br><input type="text"></label><br>
-            <label for="cf"> Codice Fiscale <br> <input type="text"> </label> <br>
-            <label for="email">Email <br> <input type="email" readonly></label><br>
-            <label for="telefono">Telefono<br><input type="text"></label><br>
-            <label for="ruolo">Ruolo<br>
+           
+            <label for="nome"> Nome <br> <input type="text" required [(ngModel)]="dipendente!.nome" value="{{dipendente?.nome}}"></label> <br>
+            <label for="cognome">Cognome <br><input type="text" required [(ngModel)]="dipendente!.cognome" value="{{dipendente?.cognome}}"></label><br>
+            <label for="cf"> Codice Fiscale <br> <input type="text" required [(ngModel)]="dipendente!.cf" value="{{dipendente?.cf}}"> </label> <br>
+            <label for="email">Email <br> <input type="email" readonly ></label><br>
+            <label for="password"> Password <br> <input type="password" required [(ngModel)]="dipendente!.password" value="{{dipendente?.password}}"></label><br>
+            <label for="telefono"> Telefono <br> <input type="text" required [(ngModel)]="dipendente!.telefono" value="{{dipendente?.telefono}}"></label><br>
+                        <label for="ruolo">Ruolo<br>
+
+            <ng-container *ngFor="let ruolo of listaRuoli">
                 <select name="scelta">
-                    <option value=""></option>
-                    <option value="junior">Junior</option>
-                    <option value="middle">Middle</option>
-                    <option value="senior">Senior</option>
-                    <option value="hr">HR</option>
+                    <option [ngValue]="ruolo" >{{ruolo.anzianita}}</option>
                 </select>
-            </label>
+            </ng-container>
+
+</label>
+
+
+
+            
+            <label for="attivo">Attivo</label>
+            <input type="radio" id="attivo" name="gruppo" value="Attivo" required [(ngModel)]="dipendente!.attivo" value="{{dipendente?.attivo}}">
+            <label for="inattivo">Inattivo</label>
+            <input type="radio" id="inattivo" name="gruppo" value="Inattivo" required [(ngModel)]="dipendente!.attivo" value="{{dipendente?.attivo}}">
             <div class="div-button">
                 <button class="submit" type="submit"> Salva </button>
             </div>  

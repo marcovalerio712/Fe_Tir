@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Dipendente } from 'src/models/dipendente';
 import { DipendenteService } from 'src/service/DipendenteService/dipendente.service';
 
 @Component({
@@ -6,12 +7,14 @@ import { DipendenteService } from 'src/service/DipendenteService/dipendente.serv
   templateUrl: './lista-dip.component.html',
   styleUrls: ['./lista-dip.component.css']
 })
-export class ListaDipComponent {
+export class ListaDipComponent implements OnInit{
   dipendenti?: any[];
   showPopup: boolean = false;
+  updatedDip: Dipendente = new Dipendente;
+
   constructor(private dipendenteService : DipendenteService){}
   ngOnInit() {
-    // Chiamata al metodo getAllDipendenti del servizio
+  
     this.dipendenteService.getAllDipendenti()
     .subscribe(
       data => {
@@ -21,11 +24,21 @@ export class ListaDipComponent {
     );
   }
 
-  openPopup(){
+  openPopup(dipendente: Dipendente){
     this.showPopup = true;
+    this.updatedDip.id = dipendente.id;
+    this.updatedDip.nome = dipendente.nome;
+    this.updatedDip.cognome = dipendente.cognome;
+    this.updatedDip.cf = dipendente.cf;
+    this.updatedDip.password = dipendente.password;
+    this.updatedDip.telefono = dipendente.telefono;
+    this.updatedDip.registrato = dipendente.registrato;
+    this.updatedDip.ruolo = dipendente.ruolo;
+    this.updatedDip.attivo = dipendente.attivo;
+    
   }
   closePopup(): void {
-    this.showPopup = false; // Imposta la variabile showPopup per chiudere il popup
+    this.showPopup = false;
   }
   
   
