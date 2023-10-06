@@ -2,6 +2,7 @@ import { HttpErrorResponse } from '@angular/common/http';
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Dipendente } from 'src/models/dipendente';
 import { Ruolo } from 'src/models/ruolo';
+import { DipendenteService } from 'src/service/DipendenteService/dipendente.service';
 import { RuoloService } from 'src/service/ruolo.service';
 
 @Component({
@@ -14,7 +15,7 @@ export class UpdateDipComponent implements OnInit {
   @Input() dipendente? : Dipendente;
   listaRuoli? : Ruolo[];
 
-constructor( private ruoservice : RuoloService){}
+constructor( private ruoservice : RuoloService, private service : DipendenteService){}
 
   ngOnInit(): void {
     console.log(this.dipendente)
@@ -32,6 +33,23 @@ constructor( private ruoservice : RuoloService){}
     this.closePopup.emit();
   } 
 
+  onSubmit(){
+    console.log(this.dipendente) 
+    this.updateDipendente(this.dipendente!);
+
+  }
+  private updateDipendente(dipendente : Dipendente){
+    this.service.updateDipendente(dipendente).subscribe({
+    next : dipendente => {
+      console.log(dipendente);
+      this.dipendente = new Dipendente;
+      window.location.reload();
+
+
+    },
+    error: error => console.log(error)
+    });
+  }
 
 
 
