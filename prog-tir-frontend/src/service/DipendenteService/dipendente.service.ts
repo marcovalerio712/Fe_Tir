@@ -34,5 +34,9 @@ export class DipendenteService {
     // Esegui la richiesta HTTP di login al server Java
     return this.http.post<any>(`${this.baseUrl}/login`, credentials);
   }
+
+  confirmRegistration(token: string): Observable<any>{
+    return this.http.post<any>(`${this.baseUrl}/confirm/${token}`, null);
+  }
   
 }
