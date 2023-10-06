@@ -8,7 +8,7 @@ import { UpdateDipComponent } from './update-dip/update-dip.component';
 const routes: Routes = [
 
   { path: 'login', component: LoginComponent },
-  { path: 'lista_dip', component: ListaDipComponent },
+  { path: 'lista-dip', component: ListaDipComponent },
   { path: 'registration', component: RegistrazioneComponent },
   { path: 'update-dip', component: UpdateDipComponent }
 ];
