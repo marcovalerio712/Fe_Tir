@@ -7,7 +7,7 @@ import { UpdateDipComponent } from './update-dip/update-dip.component';
 import { RegistrationConfirmComponent } from './registration-confirm/registration-confirm.component';
 
 const routes: Routes = [
-
+  { path: '', redirectTo: 'Home', pathMatch:'full' },
   { path: 'login', component: LoginComponent },
   { path: 'lista-dip', component: ListaDipComponent },
   { path: 'registration', component: RegistrazioneComponent },

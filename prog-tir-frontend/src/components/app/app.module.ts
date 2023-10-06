@@ -10,6 +10,8 @@ import { ListaDipComponent } from './lista-dip/lista-dip.component';
 import { RegistrazioneComponent } from './registrazione/registrazione.component';
 import { UpdateDipComponent } from './update-dip/update-dip.component';
 import { RegistrationConfirmComponent } from './registration-confirm/registration-confirm.component';
+import { HomeComponent } from './home/home.component';
+import { NavBarComponent } from './nav-bar/nav-bar.component';
 
 
 @NgModule({
@@ -19,7 +21,9 @@ import { RegistrationConfirmComponent } from './registration-confirm/registratio
     ListaDipComponent,
     RegistrazioneComponent,
     UpdateDipComponent,
-    RegistrationConfirmComponent
+    RegistrationConfirmComponent,
+    HomeComponent,
+    NavBarComponent
   ],
   imports: [
     BrowserModule,
