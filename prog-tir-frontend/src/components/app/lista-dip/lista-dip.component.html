@@ -41,7 +41,7 @@
 
 
 <ng-container *ngIf="showPopup">
-  <app-update-dip (closePopup)="closePopup()"></app-update-dip>
+  <app-update-dip [dipendente]="updatedDip" (closePopup)="closePopup()" ></app-update-dip>
 </ng-container>
 
 

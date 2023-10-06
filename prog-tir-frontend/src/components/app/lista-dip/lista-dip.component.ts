@@ -30,6 +30,7 @@ export class ListaDipComponent implements OnInit{
     this.updatedDip.nome = dipendente.nome;
     this.updatedDip.cognome = dipendente.cognome;
     this.updatedDip.cf = dipendente.cf;
+    this.updatedDip.email = dipendente.email;
     this.updatedDip.password = dipendente.password;
     this.updatedDip.telefono = dipendente.telefono;
     this.updatedDip.registrato = dipendente.registrato;
