@@ -12,6 +12,7 @@ import { UpdateDipComponent } from './update-dip/update-dip.component';
 import { RegistrationConfirmComponent } from './registration-confirm/registration-confirm.component';
 import { HomeComponent } from './home/home.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
+import { ListaComComponent } from './lista-com/lista-com.component';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
     UpdateDipComponent,
     RegistrationConfirmComponent,
     HomeComponent,
-    NavBarComponent
+    NavBarComponent,
+    ListaComComponent
   ],
   imports: [
     BrowserModule,
