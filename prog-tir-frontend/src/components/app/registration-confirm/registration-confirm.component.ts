@@ -11,7 +11,7 @@ import { DipendenteService } from 'src/service/DipendenteService/dipendente.serv
 export class RegistrationConfirmComponent implements OnInit{
 
   token?: string | null;
-  message: string = '';
+  message: string = 'Test Message';
 
   constructor(private route: ActivatedRoute, private service: DipendenteService, private router: Router){
 
@@ -28,7 +28,7 @@ export class RegistrationConfirmComponent implements OnInit{
             this.message = 'Conferma registrazione riuscita!, verrai reindirizzato tra pochi secondi.'
             setTimeout(()=>{
               this.router.navigate(['login']);
-            }, 3000);
+            }, 5000);
           },
           error: () => {
             this.message = 'Errore conferma registrazione.'
