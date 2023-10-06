@@ -4,19 +4,19 @@
         <div class="col-md-6 offset-md-3">
           <h2 style="display: block; text-align: center;">Registration<img [src]="registerUrl" alt="Lock Icon" class="lock-icon"></h2>
           <form (ngSubmit)="onSubmit()">           
-            <label for="nome"> Nome <br> <input name="nome" type="text" required [(ngModel)]="dipendente!.nome" value="{{dipendente?.nome}}"></label> <br>
-            <label for="cognome">Cognome <br><input name="cognome" type="text" required [(ngModel)]="dipendente!.cognome" value="{{dipendente?.cognome}}"></label><br>
-            <label for="cf"> Codice Fiscale <br> <input name="cf" type="text" required [(ngModel)]="dipendente!.cf" value="{{dipendente?.cf}}"> </label> <br>
-            <label for="email">Email <br> <input name="email" type="email" required [(ngModel)]="dipendente!.email" value="{{dipendente?.email}}"></label><br>
-            <label for="password"> Password <br> <input name="password" required [(ngModel)]="dipendente!.password" value="{{dipendente?.password}}"></label><br>
-            <label for="telefono"> Telefono <br> <input name="telefono" type="text" required [(ngModel)]="dipendente!.telefono" value="{{dipendente?.telefono}}"></label><br>
-            <label for="ruolo">Ruolo<br>
-                <select name="ruolo">
-                    <ng-container *ngFor="let ruolo of listaRuoli">
-                    <option [ngValue]="ruolo" >{{ruolo.anzianita}}</option>               
-                    </ng-container>
-                </select>
-            </label>
+            <label for="nome"> Nome <br> 
+              <input name="nome" id="nome" type="text" required [(ngModel)]="dipendente.nome" value="{{dipendente.nome}}"></label> <br>
+            <label for="cognome">Cognome <br>
+              <input name="cognome" id="cognome" type="text" required [(ngModel)]="dipendente.cognome" value="{{dipendente.cognome}}"></label><br>
+            <label for="cf"> Codice Fiscale <br> 
+              <input name="cf" type="text" id="cf" required [(ngModel)]="dipendente.cf" value="{{dipendente.cf}}"> </label> <br>
+            <label for="email">Email <br> 
+              <input name="email" type="email" id="email" required [(ngModel)]="dipendente.email" value="{{dipendente.email}}"></label><br>
+            <label for="password"> Password <br> 
+              <input name="password" type="password" id="password" required [(ngModel)]="dipendente.password" value="{{dipendente.password}}"></label><br>
+            <label for="telefono"> Telefono <br> 
+              <input name="telefono" type="text" id="telefono" required [(ngModel)]="dipendente.telefono" value="{{dipendente.telefono}}"></label><br>
+           
             <div class="div-button">
                 <button class="submit" type="submit"> Salva </button>
             </div>  
