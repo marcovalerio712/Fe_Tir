@@ -1,0 +1,31 @@
+<h1>Clienti</h1>
+<table>
+
+  <thead>
+    <td>ID</td>
+    <td>Nome</td>
+    <td>Partita IVA</td>
+    <td>Telefono</td>
+  </thead>
+
+  <tbody>
+    <tr *ngFor="let cliente of clienti!.reverse()">
+      <td>{{cliente.id}}</td>
+      <td>{{cliente.nome}}</td>
+      <td>{{cliente.partitaIva}}</td>
+      <td>{{cliente.telefono}}</td>
+      <td><button (click)="openPopup(cliente)" class="modifica"><img src="assets/images/modifica.png" alt="matita di modifica"> </button> 
+      <button (click)="deleteCli(cliente)" class="elimina">x</button> </td>
+
+      
+    </tr>
+  </tbody>
+
+
+</table> 
+
+
+
+<ng-container *ngIf="showPopup">
+  <app-update-cli [cliente]="updatedCli" (closePopup)="closePopup()" ></app-update-cli>
+</ng-container>

@@ -1,0 +1,16 @@
+<div class="popup">
+    <div class="popup-content">
+        <div class="button-close-container">
+        <button (click)="close()">X</button>
+    </div>
+        <h2>Modifica cliente</h2>
+        <form (ngSubmit)="onSubmit()">           
+            <label for="nome"> Nome <br> <input name="nome" type="text" readonly required [(ngModel)]="cliente!.nome" value="{{cliente?.nome}}"></label> <br>
+            <label for="partitaIVA">Partita IVA <br><input name="partitaIVA" readonly type="text" required [(ngModel)]="cliente!.partitaIva" value="{{cliente?.partitaIva}}"></label><br>
+            <label for="telefono"> Telefono <br> <input name="telefono" type="text" required [(ngModel)]="cliente!.telefono" value="{{cliente?.telefono}}"> </label> <br>
+            <div class="div-button">
+                <button class="submit" type="submit"> Salva </button>
+            </div>  
+        </form>
+    </div>
+</div>

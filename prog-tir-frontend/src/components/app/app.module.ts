@@ -13,6 +13,8 @@ import { RegistrationConfirmComponent } from './registration-confirm/registratio
 import { HomeComponent } from './home/home.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { ListaComComponent } from './lista-com/lista-com.component';
+import { ListaCliComponent } from './lista-cli/lista-cli.component';
+import { UpdateCliComponent } from './update-cli/update-cli.component';
 
 
 @NgModule({
@@ -25,7 +27,9 @@ import { ListaComComponent } from './lista-com/lista-com.component';
     RegistrationConfirmComponent,
     HomeComponent,
     NavBarComponent,
-    ListaComComponent
+    ListaComComponent,
+    ListaCliComponent,
+    UpdateCliComponent
   ],
   imports: [
     BrowserModule,
