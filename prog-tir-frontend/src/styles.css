@@ -1,0 +1,8 @@
+body {
+    background-image: url('/assets/images/sfondo.jpg');
+  
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
+height: 97vh;
+  }

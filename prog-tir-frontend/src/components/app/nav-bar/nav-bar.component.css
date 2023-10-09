@@ -1,3 +1,29 @@
-a{
-    color: black;
+
+nav {
+    background-color: rgba(255, 255, 255, 0.534);
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Ombra sul bordo superiore */
+}
+
+nav a{
+    color: #131d72;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: larger;
+}
+nav a:hover{
+    color: #e5ecff;
+    text-shadow: 2px 2px 6px #131d72; 
+
+
+}
+
+.nav1{
+    display: flex;
+}
+.nav2 {
+    display: flex;
 }
