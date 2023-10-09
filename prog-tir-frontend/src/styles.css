@@ -1,8 +1,10 @@
+
 body {
-    background-image: url('/assets/images/sfondo.jpg');
-  
-background-size: cover;
-background-position: center;
-background-repeat: no-repeat;
-height: 97vh;
-  }
+  background-image: url('/assets/images/sfondo.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 150vh; /* Imposta l'altezza a 100% per coprire l'intera finestra */
+  margin: 0;
+  padding: 0;
+}

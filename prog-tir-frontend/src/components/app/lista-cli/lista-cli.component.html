@@ -1,4 +1,5 @@
 <h1>Clienti</h1>
+<div class="table-container">
 <table>
 
   <thead>
@@ -14,7 +15,7 @@
       <td>{{cliente.nome}}</td>
       <td>{{cliente.partitaIva}}</td>
       <td>{{cliente.telefono}}</td>
-      <td><button (click)="openPopup(cliente)" class="modifica"><img src="assets/images/modifica.png" alt="matita di modifica"> </button> 
+      <td id="btn"><button (click)="openPopup(cliente)" class="modifica"><img src="assets/images/modifica.png" alt="matita di modifica"> </button> 
       <button (click)="deleteCli(cliente)" class="elimina">x</button> </td>
 
       
@@ -24,7 +25,7 @@
 
 </table> 
 
-
+</div>
 
 <ng-container *ngIf="showPopup">
   <app-update-cli [cliente]="updatedCli" (closePopup)="closePopup()" ></app-update-cli>
