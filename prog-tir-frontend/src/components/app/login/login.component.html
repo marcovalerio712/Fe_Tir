@@ -1,7 +1,5 @@
 
 <div class="container">
-  <div class="row">
-
       <h1>Login<img [src]="lockImageUrl" alt="Lock Icon" class="lock-icon"></h1>
       <form (ngSubmit)="onSubmit()">
         <div class="login-box text-center">       
@@ -9,12 +7,9 @@
           <input type="email" id="email" name="email" [(ngModel)]="dipendente.email" class="form-control" required>
           <label for="password">Password</label>
           <input type="password" id="password" name="password" [(ngModel)]="dipendente.password" class="form-control" required >
-        
         <div class="btn">
-          <button type="submit" >Sign in</button>
+          <button type="submit" >Entra</button>
         </div>
       </div>
       </form>
-    
-  </div>
 </div>

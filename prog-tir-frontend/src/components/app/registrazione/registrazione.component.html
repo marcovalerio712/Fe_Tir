@@ -1,66 +1,24 @@
 
-    <div class="container text-center">
-      <div class="row">
-        <div class="col-md-6 offset-md-3">
-          <h2 style="display: block; text-align: center;">Registration<img [src]="registerUrl" alt="Lock Icon" class="lock-icon"></h2>
-          <form (ngSubmit)="onSubmit()">           
-            <label for="nome"> Nome <br> 
-              <input name="nome" id="nome" type="text" required [(ngModel)]="dipendente.nome" value="{{dipendente.nome}}"></label> <br>
-            <label for="cognome">Cognome <br>
-              <input name="cognome" id="cognome" type="text" required [(ngModel)]="dipendente.cognome" value="{{dipendente.cognome}}"></label><br>
-            <label for="cf"> Codice Fiscale <br> 
-              <input name="cf" type="text" id="cf" required [(ngModel)]="dipendente.cf" value="{{dipendente.cf}}"> </label> <br>
-            <label for="email">Email <br> 
-              <input name="email" type="email" id="email" required [(ngModel)]="dipendente.email" value="{{dipendente.email}}"></label><br>
-            <label for="password"> Password <br> 
-              <input name="password" type="password" id="password" required [(ngModel)]="dipendente.password" value="{{dipendente.password}}"></label><br>
-            <label for="telefono"> Telefono <br> 
-              <input name="telefono" type="text" id="telefono" required [(ngModel)]="dipendente.telefono" value="{{dipendente.telefono}}"></label><br>
-           
-            <div class="div-button">
-                <button class="submit" type="submit"> Salva </button>
-            </div>  
+<div class="container">
+  <h1>Registrazione<img [src]="registerUrl" alt="Lock Icon" class="lock-icon"></h1>
+      <form (ngSubmit)="onSubmit()">  
+        <div class="registration-box text-center">       
+            <label for="nome"> Nome </label> 
+              <input name="nome" id="nome" type="text" required [(ngModel)]="dipendente.nome" value="{{dipendente.nome}}">
+            <label for="cognome">Cognome </label> 
+              <input name="cognome" id="cognome" type="text" required [(ngModel)]="dipendente.cognome" value="{{dipendente.cognome}}">
+            <label for="cf"> Codice Fiscale </label> 
+              <input name="cf" type="text" id="cf" required [(ngModel)]="dipendente.cf" value="{{dipendente.cf}}"> 
+            <label for="email">Email </label> 
+              <input name="email" type="email" id="email" required [(ngModel)]="dipendente.email" value="{{dipendente.email}}">
+            <label for="password"> Password </label> 
+              <input name="password" type="password" id="password" required [(ngModel)]="dipendente.password" value="{{dipendente.password}}">
+            <label for="telefono"> Telefono </label> 
+              <input name="telefono" type="text" id="telefono" required [(ngModel)]="dipendente.telefono" value="{{dipendente.telefono}}">
+            <div class="btn">
+                <button class="submit" type="submit"> Registra </button>
+            </div> 
+          </div> 
         </form>
-          <!--<form (ngSubmit)="onSubmit()">
-            <div class="login-box"> 
-                  <div class="form-group text-center">
-                    <label for="nome" style="display: block; text-align: center;"></label>
-                    <input type="nome" id="nome" name="nome" class="form-control" required placeholder="Nome">
-                </div>
-                  <div class="form-group text-center">
-                    <label for="cognome" style="display: block; text-align: center;"></label>
-                    <input type="cognome" id="cognome" name="cognome" class="form-control" required placeholder="Cognome">
-                </div>
-                  <div class="form-group text-center">
-                    <label for="codicef" style="display: block; text-align: center;"></label>
-                    <input type="codicef" id="codicef" name="codicef" class="form-control" required placeholder="CodiceFiscale">
-                </div>
-                  <div class="form-group text-center">
-                    <label for="email" style="display: block; text-align: center;"></label>
-                    <input type="email" id="email" name="email" class="form-control" required placeholder="Email">
-                </div>
-                  <div class="form-group text-center">
-                    <label for="password" style="display: block; text-align: center;"></label>
-                    <input type="password" id="password" name="password" class="form-control" required placeholder="Password">
-                </div>                              
-                  <div class="form-group text-center">
-                    <label for="telefono" style="display: block; text-align: center;"></label>
-                    <input type="telefono" id="telefono" name="telefono" class="form-control" required placeholder="Telefono">
-                </div>
-                    <div class="form-group text-center">
-                    <select id="ruolo" name="ruolo" class="form-control custom-select">
-                        <option value="Ruolo1">Junior</option>
-                        <option value="Ruolo2">Middle</option>
-                        <option value="Ruolo3">Senior</option>
-                        <option value="Ruolo4">HR</option>
-                    </select>
-                </div>
-              <div class="center-vertically">
-              <button type="submit" class="btn btn-primary">Register</button>
-            </div>
-          </div>
-          </form>-->
-        </div>
-      </div>
-    </div>
-   
+  </div>
+         

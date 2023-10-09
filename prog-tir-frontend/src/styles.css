@@ -1,5 +1,6 @@
 
 body {
+  font-family: 'Times New Roman', Times, serif;
   background-image: url('/assets/images/sfondo.jpg');
   background-size: cover;
   background-position: center;

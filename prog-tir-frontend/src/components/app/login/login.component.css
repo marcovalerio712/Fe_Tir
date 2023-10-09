@@ -19,43 +19,43 @@ label {
     margin: 10px;
     font-weight: bold;
     display: block; 
-    font-size: larger;
-}
- 
-input{
-  width: 80%;
-    padding: 10px;
-    border: 2px solid #131d72;
-    border-radius: 100px;
     font-size: large;
 }
+ 
+input {
+  width: 80%;
+  padding: 5px;
+  border: 2px solid #131d72;
+  border-radius: 100px;
+}
   
-  input:focus{
+input:focus{
   outline-color: rgb(255, 255, 255) ;
-  } 
+} 
 
-  .lock-icon {
+.lock-icon {
     width: 32px;
     height: auto;
     margin-right: 10px;
     position: relative;
     top: 5px;
-  }
-  .text-center {
+}
+.text-center {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-  }
-  .btn {
+}
+
+.btn {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 30%;
-  }
+}
 
-  button[type="submit"] {
+button[type="submit"] {
     background-color: #131d72;
     color: #fff;
     padding: 15px 20px; 
@@ -64,6 +64,7 @@ input{
     cursor: pointer;
     transition: transform 0.2s;
 }
+
 button[type="submit"]:hover {
     transform: scale(1.05);
     background-color: #0067d5;
