@@ -1,3 +1,4 @@
+import { DatePipe } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { Commessa } from 'src/models/commessa';
 import { CommessaService } from 'src/service/CommessaService/commessa.service';
@@ -11,7 +12,9 @@ export class ListaComComponent implements OnInit{
   commesse?: any[];
   showPopup: boolean = false;
   updateComm: Commessa = new Commessa;
-
+  
+  // me sa che angular c'ha la mamma troia
+  
   constructor(private commessaService : CommessaService){}
   ngOnInit() {
   

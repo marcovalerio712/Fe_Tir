@@ -15,6 +15,7 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { ListaComComponent } from './lista-com/lista-com.component';
 import { ListaCliComponent } from './lista-cli/lista-cli.component';
 import { UpdateCliComponent } from './update-cli/update-cli.component';
+import { UpdateComComponent } from './update-com/update-com.component';
 
 
 @NgModule({
@@ -29,7 +30,8 @@ import { UpdateCliComponent } from './update-cli/update-cli.component';
     NavBarComponent,
     ListaComComponent,
     ListaCliComponent,
-    UpdateCliComponent
+    UpdateCliComponent,
+    UpdateComComponent
   ],
   imports: [
     BrowserModule,

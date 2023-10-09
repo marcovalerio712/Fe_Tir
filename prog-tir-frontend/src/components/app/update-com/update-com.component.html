@@ -1,0 +1,29 @@
+<div class="popup">
+    <div class="popup-content">
+        <div class="button-close-container">
+        <button (click)="close()">X</button>
+    </div>
+        <h2>Modifica commessa</h2>
+        <form (ngSubmit)="onSubmit()">           
+            <label for="tipo"> Tipo <br> <input name="tipo" type="text" required [(ngModel)]="commessa!.tipo" value="{{commessa?.tipo}}"></label> <br>
+            <label for="durata"> Durata <br> <input name="durata" type="text" required [(ngModel)]="commessa!.durata" value="{{commessa?.durata}}"></label> <br>
+            <label for="descrizione"> Descrizione <br> <input name="descrizione" type="text" required [(ngModel)]="commessa!.descrizione" value="{{commessa?.descrizione}}"></label> <br>
+            <label for="importoContratto"> Importo Contratto <br> <input name="importoContratto" type="text" required [(ngModel)]="commessa!.importoContratto" value="{{commessa?.importoContratto}}"></label> <br>
+            <label for="dataInizio"> Data Inizio <br> <input name="dataInizio" type="date" required [(ngModel)]="commessa!.dataInizio"></label> <br>
+            <label for="dataFine"> Data Fine <br> <input name="dataFine" type="date" required [(ngModel)]="commessa!.dataFine"></label> <br>
+            <label for="cliente"> Cliente <br> <input name="cliente" type="text" required [(ngModel)]="commessa!.cliente!.id" value="{{commessa?.cliente!.nome}}"></label> <br>
+            <!--<form>
+                <label>
+                  <input for="attivo" type="radio" name="attivo" value="true" required [(ngModel)]="commessa!.tipo"> Attivo 
+                </label>
+                <br>
+                <label>
+                  <input for="attivo" type="radio" name="attivo" value="false" required [(ngModel)]="commessa!.tipo"> Federico
+                </label>
+              </form> -->
+            <div class="div-button">
+                <button class="submit" type="submit"> Salva </button>
+            </div>  
+        </form>
+    </div>
+</div>
