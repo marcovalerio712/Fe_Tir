@@ -1,23 +1,20 @@
 
-<div class="container text-center">
+<div class="container">
   <div class="row">
-    <div class="col-md-6 offset-md-3">
-      <h2 style="display: block; text-align: center;">Login<img [src]="lockImageUrl" alt="Lock Icon" class="lock-icon"></h2>
+
+      <h1>Login<img [src]="lockImageUrl" alt="Lock Icon" class="lock-icon"></h1>
       <form (ngSubmit)="onSubmit()">
-        <div class="login-box">
-        <div class="form-group text-center">
-          <label for="email" style="display: block; text-align: center;"></label>
-          <input type="email" id="email" name="email" [(ngModel)]="dipendente.email" class="form-control" required placeholder="Email">
-        </div>
-        <div class="form-group text-center">
-          <label for="password" style="display: block; text-align: center;"></label>
-          <input type="password" id="password" name="password" [(ngModel)]="dipendente.password" class="form-control" required placeholder="Password">
-        </div>
-        <div class="center-vertically">
-          <button type="submit" class="btn btn-primary">Sign in</button>
+        <div class="login-box text-center">       
+          <label for="email" >Email</label>
+          <input type="email" id="email" name="email" [(ngModel)]="dipendente.email" class="form-control" required>
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" [(ngModel)]="dipendente.password" class="form-control" required >
+        
+        <div class="btn">
+          <button type="submit" >Sign in</button>
         </div>
       </div>
       </form>
-    </div>
+    
   </div>
 </div>

@@ -20,7 +20,7 @@
 
   <!-- federico è un coglione -->
   <tbody>
-    <tr *ngFor="let commessa of commesse">
+    <tr *ngFor="let commessa of commesse!.reverse()">
       <td>{{commessa.id}}</td>
       <td>{{commessa.tipo}}</td>
       <td>{{commessa.durata }}</td>
