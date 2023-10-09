@@ -16,6 +16,7 @@ import { ListaComComponent } from './lista-com/lista-com.component';
 import { ListaCliComponent } from './lista-cli/lista-cli.component';
 import { UpdateCliComponent } from './update-cli/update-cli.component';
 import { UpdateComComponent } from './update-com/update-com.component';
+import { NewDipComponent } from './new-dip/new-dip.component';
 
 
 @NgModule({
@@ -31,7 +32,8 @@ import { UpdateComComponent } from './update-com/update-com.component';
     ListaComComponent,
     ListaCliComponent,
     UpdateCliComponent,
-    UpdateComComponent
+    UpdateComComponent,
+    NewDipComponent
   ],
   imports: [
     BrowserModule,

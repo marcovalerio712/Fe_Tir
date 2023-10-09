@@ -23,6 +23,7 @@ export class DipendenteService {
     return this.http.post<any>(`${this.baseUrl}`, dip);
   }
 
+
   updateDipendente(dip: any): Observable<any> {
     return this.http.put<any>(`${this.baseUrl}`, dip);
   }

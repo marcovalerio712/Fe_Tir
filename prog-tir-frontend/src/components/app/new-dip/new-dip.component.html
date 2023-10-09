@@ -1,0 +1,26 @@
+<div class="popup">
+    <div class="popup-content">
+        <div class="button-close-container">
+        <button (click)="close()">X</button>
+    </div>
+        <h2>Inserisci dipendente</h2>
+        <form (ngSubmit)="onSubmit()">           
+            <label for="nome"> Nome <br> <input name="nome" type="text" required [(ngModel)]="dipendente!.nome"></label> <br>
+            <label for="cognome">Cognome <br><input name="cognome" type="text" required [(ngModel)]="dipendente!.cognome"></label><br>
+            <label for="cf"> Codice Fiscale <br> <input name="cf" type="text" required [(ngModel)]="dipendente!.cf"> </label> <br>
+            <label for="email">Email <br> <input name="email" type="text" [(ngModel)]="dipendente!.email"></label><br>
+            <label for="password">Password <br> <input name="password" type="text" [(ngModel)]="dipendente!.password"></label><br>
+            <label for="telefono"> Telefono <br> <input name="telefono" type="text" required [(ngModel)]="dipendente!.telefono"></label><br>
+            <label for="ruolo">Ruolo<br>
+                <select name="ruolo" required [(ngModel)]="dipendente!.ruolo">
+                    <ng-container *ngFor="let ruolo of listaRuoli">
+                    <option [ngValue]="ruolo" >{{ruolo.anzianita}}</option>               
+                    </ng-container>
+                </select>
+            </label>
+            <div class="div-button">
+                <button class="submit" type="submit"> Salva </button>
+            </div>  
+        </form>
+    </div>
+</div>

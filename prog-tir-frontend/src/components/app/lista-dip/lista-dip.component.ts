@@ -9,7 +9,7 @@ import { DipendenteService } from 'src/service/DipendenteService/dipendente.serv
 })
 export class ListaDipComponent implements OnInit{
   dipendenti?: any[];
-  showPopup: boolean = false;
+  showPopupUpdate: boolean = false;
   updatedDip: Dipendente = new Dipendente;
 
   constructor(private dipendenteService : DipendenteService){}
@@ -24,8 +24,8 @@ export class ListaDipComponent implements OnInit{
     );
   }
 
-  openPopup(dipendente: Dipendente){
-    this.showPopup = true;
+  openPopupUpdate(dipendente: Dipendente){
+    this.showPopupUpdate = true;
     this.updatedDip.id = dipendente.id;
     this.updatedDip.nome = dipendente.nome;
     this.updatedDip.cognome = dipendente.cognome;
@@ -38,8 +38,9 @@ export class ListaDipComponent implements OnInit{
     this.updatedDip.attivo = dipendente.attivo;
     
   }
-  closePopup(): void {
-    this.showPopup = false;
+
+  closePopupUpdate(): void {
+    this.showPopupUpdate = false;
   }
   
   deleteDip(dipendente : Dipendente){

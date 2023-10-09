@@ -2,6 +2,8 @@
 
 
 <h1>Dipendenti</h1>
+
+
 <table>
 
   <thead>
@@ -27,7 +29,7 @@
       <td>{{dipendente.ruolo?.anzianita}}</td>
       <td>{{dipendente.registrato ? 'Si' : 'No' }} </td>
       <td>{{dipendente.attivo ? 'Attivo' : 'Inattivo'}} </td>
-      <td><button (click)="openPopup(dipendente)" class="modifica"><img src="assets/images/modifica.png" alt="matita di modifica"> </button> 
+      <td><button (click)="openPopupUpdate(dipendente)" class="modifica"><img src="assets/images/modifica.png" alt="matita di modifica"> </button> 
       <button (click)="deleteDip(dipendente)" class="elimina">x</button> </td>
 
       
@@ -39,8 +41,8 @@
 
 
 
-<ng-container *ngIf="showPopup">
-  <app-update-dip [dipendente]="updatedDip" (closePopup)="closePopup()" ></app-update-dip>
+<ng-container *ngIf="showPopupUpdate">
+  <app-update-dip [dipendente]="updatedDip" (closePopup)="closePopupUpdate()" ></app-update-dip>
 </ng-container>
 
 
