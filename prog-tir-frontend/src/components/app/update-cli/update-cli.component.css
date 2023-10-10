@@ -64,6 +64,10 @@
     input[type="email"]{
         cursor: not-allowed;
     }
+
+    .readonly{
+        cursor: not-allowed;
+    }
     
     
     option{
