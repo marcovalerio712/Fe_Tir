@@ -19,6 +19,7 @@ import { UpdateComComponent } from './update-com/update-com.component';
 import { NewDipComponent } from './new-dip/new-dip.component';
 import { TimbraturaComponent } from './timbratura/timbratura.component';
 import { ListaAssComponent } from './lista-ass/lista-ass.component';
+import { UpdateAssComponent } from './update-ass/update-ass.component';
 
 
 @NgModule({
@@ -37,7 +38,8 @@ import { ListaAssComponent } from './lista-ass/lista-ass.component';
     UpdateComComponent,
     NewDipComponent,
     TimbraturaComponent,
-    ListaAssComponent
+    ListaAssComponent,
+    UpdateAssComponent
   ],
   imports: [
     BrowserModule,
