@@ -7,6 +7,7 @@ import { UpdateDipComponent } from './update-dip/update-dip.component';
 import { RegistrationConfirmComponent } from './registration-confirm/registration-confirm.component';
 import { ListaComComponent } from './lista-com/lista-com.component';
 import { ListaCliComponent } from './lista-cli/lista-cli.component';
+import { TimbraturaComponent } from './timbratura/timbratura.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'Home', pathMatch:'full' },
@@ -16,7 +17,8 @@ const routes: Routes = [
   { path: 'update-dip', component: UpdateDipComponent },
   { path: 'confirm', component: RegistrationConfirmComponent },
   { path: 'lista-com', component: ListaComComponent },
-  { path: 'lista-cli', component: ListaCliComponent}
+  { path: 'lista-cli', component: ListaCliComponent},
+  { path: 'timbratura', component: TimbraturaComponent}
 ];
 
 @NgModule({

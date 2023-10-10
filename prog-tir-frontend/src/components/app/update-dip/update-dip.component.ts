@@ -3,7 +3,7 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Dipendente } from 'src/models/dipendente';
 import { Ruolo } from 'src/models/ruolo';
 import { DipendenteService } from 'src/service/DipendenteService/dipendente.service';
-import { RuoloService } from 'src/service/ruolo.service';
+import { RuoloService } from 'src/service/RuoloService/ruolo.service';
 
 @Component({
   selector: 'app-update-dip',
