@@ -18,6 +18,7 @@ import { UpdateCliComponent } from './update-cli/update-cli.component';
 import { UpdateComComponent } from './update-com/update-com.component';
 import { NewDipComponent } from './new-dip/new-dip.component';
 import { TimbraturaComponent } from './timbratura/timbratura.component';
+import { ListaAssComponent } from './lista-ass/lista-ass.component';
 
 
 @NgModule({
@@ -35,7 +36,8 @@ import { TimbraturaComponent } from './timbratura/timbratura.component';
     UpdateCliComponent,
     UpdateComComponent,
     NewDipComponent,
-    TimbraturaComponent
+    TimbraturaComponent,
+    ListaAssComponent
   ],
   imports: [
     BrowserModule,
