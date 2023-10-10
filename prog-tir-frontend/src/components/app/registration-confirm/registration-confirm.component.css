@@ -1,11 +1,12 @@
+
+
 .message{
     width: 40%;
     margin: 200px 30%;
-    background-color: #88b2fe;
-    color: white;
+    background-color: rgba(255, 255, 255, 0.534);
+    color: rgb(0, 0, 0);
     text-align: center;
-    border: 1px solid #131d72;
     padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 0px 50px 30px rgba(255, 255, 255, 0.822);
     border-radius: 10px;
 }
