@@ -21,8 +21,10 @@ export class ListaAssComponent implements OnInit {
       data => {
         // La risposta della richiesta HTTP è contenuta in 'data'
         this.assegnazioni = data; // Assegna i dati ricevuti alla variabile 'dipendenti'
+        console.log(this.assegnazioni);
       }
     );
+    
   }
 
   openPopupUpdate(assegnazione: Assegnazione){

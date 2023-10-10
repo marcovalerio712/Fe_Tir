@@ -8,6 +8,7 @@ import { RegistrationConfirmComponent } from './registration-confirm/registratio
 import { ListaComComponent } from './lista-com/lista-com.component';
 import { ListaCliComponent } from './lista-cli/lista-cli.component';
 import { TimbraturaComponent } from './timbratura/timbratura.component';
+import { ListaAssComponent } from './lista-ass/lista-ass.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'Home', pathMatch:'full' },
@@ -18,7 +19,8 @@ const routes: Routes = [
   { path: 'confirm', component: RegistrationConfirmComponent },
   { path: 'lista-com', component: ListaComComponent },
   { path: 'lista-cli', component: ListaCliComponent},
-  { path: 'timbratura', component: TimbraturaComponent}
+  { path: 'timbratura', component: TimbraturaComponent},
+  { path: 'lista-ass', component: ListaAssComponent}
 ];
 
 @NgModule({
