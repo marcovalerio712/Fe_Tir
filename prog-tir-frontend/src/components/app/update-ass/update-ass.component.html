@@ -6,7 +6,8 @@
         <h2>Modifica assegnazione</h2>
         <form (ngSubmit)="onSubmit()">           
             <label for="commessa"> ID Commessa <br> <input name="commessa" type="text" readonly required [(ngModel)]="assegnazione!.commessa!.id" value="{{assegnazione?.commessa!.id}}"></label> <br>
-            <label for="dipendente">Dipendente <br><input name="dipendente" type="text" required [(ngModel)]="assegnazione!.dipendente!.nome" value="{{assegnazione?.dipendente!.nome}}"></label><br>
+            <label for="dipendenteid"> ID Dipendente <br><input name="dipendenteid" type="text" required [(ngModel)]="assegnazione!.dipendente!.id" value="{{assegnazione?.dipendente!.id}}"></label><br>
+            <label for="dipendente"> Cognome Dipendente <br><input name="dipendente" type="text" readonly required [(ngModel)]="assegnazione!.dipendente!.cognome" value="{{assegnazione?.dipendente!.cognome}}"></label><br>
             <label for="competenza"> Competenza <br> <input class="readonly" name="competenza" type="text" required [(ngModel)]="assegnazione!.competenza" value="{{assegnazione?.competenza}}"> </label> <br>
             <div class="div-button">
                 <button class="submit" type="submit"> Salva </button>

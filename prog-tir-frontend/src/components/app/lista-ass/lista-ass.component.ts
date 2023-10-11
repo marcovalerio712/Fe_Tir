@@ -47,7 +47,7 @@ export class ListaAssComponent implements OnInit {
         console.log(error);
       }
     })
-     window.location.reload
+    window.location.reload
   }
 
 }

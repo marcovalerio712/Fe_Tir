@@ -12,6 +12,7 @@ export class ListaCliComponent {
   clienti?: any[];
   showPopup: boolean = false;
   updatedCli: Cliente = new Cliente;
+  isLoading = true;
 
   constructor(private service : ClienteService){}
   ngOnInit() {
@@ -23,6 +24,7 @@ export class ListaCliComponent {
         this.clienti = data; // Assegna i dati ricevuti alla variabile 'dipendenti'
       }
     );
+    
   }
 
   openPopup(cliente: Cliente){
@@ -45,5 +47,8 @@ export class ListaCliComponent {
     })
      window.location.reload
   }
-
+  
+ 
 }
+
+  
