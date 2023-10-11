@@ -1,1 +1,62 @@
-<p>timbratura works!</p>
+
+<div class="container">
+    <div class="left-side">
+      <div class="card">
+        <h2>TIMBRATURA</h2>
+        <div class="orario" id="orario">{{ currentDateTime }}</div>
+        <button class="entrata" (click)="regitraEntrata()">Entrata</button>
+        <button class="uscita" (click)="regitraUscita()">Uscita</button><br>
+      
+    </div>
+      <div class="consuntivo-card">
+       
+          <label for="tipo">Aggiungi Consuntivo</label>
+          <select id="tipo" (change)="onTypeChange($event)">
+            <option value="">Seleziona Tipo...</option>
+            <option value="permesso">Permesso</option>
+            <option value="ferie">Ferie</option>
+            <option value="malattia">Malattia</option>
+          </select>
+          
+          <div *ngIf="selectedType === 'permesso'">
+            <label for="startDate">Data di Inizio:</label>
+            <input type="date" id="startDate" [(ngModel)]="startDate">
+            
+            <label for="startTime">Orario di Inizio:</label>
+            <input type="time" id="startTime" [(ngModel)]="startTime">
+            
+            <label for="endTime">Orario di Fine:</label>
+            <input type="time" id="endTime" [(ngModel)]="endTime">
+
+            <button class="entrata">Invia</button>
+          </div>
+          
+          <div *ngIf="selectedType === 'ferie' || selectedType === 'malattia'">
+            <label for="startDate">Data di Inizio:</label>
+            <input type="date" id="startDate" [(ngModel)]="startDate">
+            
+            <label for="endDate">Data di Fine:</label>
+            <input type="date" id="endDate" [(ngModel)]="endDate">
+            <button class="entrata">Invia</button>
+          </div>
+      </div>
+    </div>
+    <div class="right-side">
+      <h3>Consuntivi:</h3>
+       <div class="consuntivi-list">
+   
+    <ul>
+      <li *ngFor="let consuntivo of consuntivi">
+        <!-- Visualizza i dettagli del consuntivo -->
+        {{ consuntivo.id }}
+        {{ consuntivo.orarioInizio }}
+        {{ consuntivo.orarioFine }}
+        {{ consuntivo. tipologia }}
+        {{ consuntivo.dipendente }}
+        <!-- Sostituisci 'nomeCampo' con il nome del campo effettivo nel tuo oggetto consuntivo -->
+      </li>
+    </ul>
+  </div>
+    </div>
+  </div>
+  
