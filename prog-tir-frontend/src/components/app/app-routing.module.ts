@@ -10,6 +10,7 @@ import { ListaCliComponent } from './lista-cli/lista-cli.component';
 import { TimbraturaComponent } from './timbratura/timbratura.component';
 import { ListaAssComponent } from './lista-ass/lista-ass.component';
 import { TirComponent } from './tir/tir.component';
+import { ListaConComponent } from './lista-con/lista-con.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'Home', pathMatch:'full' },
@@ -22,7 +23,11 @@ const routes: Routes = [
   { path: 'lista-cli', component: ListaCliComponent},
   { path: 'timbratura', component: TimbraturaComponent},
   { path: 'lista-ass', component: ListaAssComponent},
-  { path: 'tir', component: TirComponent}
+  { path: 'tir', component: TirComponent},
+
+
+  
+  { path: 'lista-con', component: ListaConComponent}
 ];
 
 @NgModule({

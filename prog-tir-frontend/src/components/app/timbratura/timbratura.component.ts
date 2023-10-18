@@ -26,9 +26,7 @@ export class TimbraturaComponent implements OnInit {
       this.updateOrario(); // Aggiorna l'orario ogni secondo
     }, 1000);
 
-    this.timbratura.getAllConsuntivi().subscribe(data => {
-      this.consuntivi = data;
-    });
+   
   }
 
   ngOnDestroy(): void {

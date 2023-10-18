@@ -21,6 +21,7 @@ import { TimbraturaComponent } from './timbratura/timbratura.component';
 import { ListaAssComponent } from './lista-ass/lista-ass.component';
 import { UpdateAssComponent } from './update-ass/update-ass.component';
 import { TirComponent } from './tir/tir.component';
+import { ListaConComponent } from './lista-con/lista-con.component';
 
 
 @NgModule({
@@ -42,6 +43,10 @@ import { TirComponent } from './tir/tir.component';
     ListaAssComponent,
     UpdateAssComponent,
     TirComponent,
+
+
+    
+    ListaConComponent,
   ],
   imports: [
     BrowserModule,

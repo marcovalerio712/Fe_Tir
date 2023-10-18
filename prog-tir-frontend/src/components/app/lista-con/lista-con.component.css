@@ -1,0 +1,78 @@
+ 
+h1{
+    text-align: center;
+}
+.table-container {
+    margin: auto;
+    width: 80%;
+    overflow-x: auto
+  }
+table{
+    margin: auto;
+    font-size: large;
+    width: 80%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    overflow-x: auto;
+}
+
+thead{
+    background-color:transparent;
+    font-weight: bold;
+    font-size: larger;
+    text-align: center;
+}
+
+tbody{
+    background-color:#ffffff;
+}
+
+td{
+    border: 2px solid white;
+    padding: 8px;
+    text-align: center;
+    white-space: nowrap; /* Evita la rottura automatica del testo */
+    overflow: hidden;
+    text-overflow: ellipsis; /* Aggiunge ellissi (...) per il testo troppo lungo */
+}
+
+button{
+    color: white;
+    background-color: #131d72;
+    border: none;
+    border-radius: 3px;
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
+    font-size: medium;
+}
+button.elimina{
+   margin-left: 5px;
+    
+}
+
+.elimina:hover{
+background-color: #a71e1e;
+border: 3px double #ffd2d2;
+
+}
+.modifica:hover{
+    background-color: #1ea0a7;
+    border: 3px double #7ebec2;
+    }
+    .aggiungi:hover{
+        background-color: #1ea74c;
+        border: 3px double #78af8a;
+    
+        }
+
+img{
+    height: 15px;
+    width: 15px;
+    filter: brightness(500%);
+
+}
+
+#btn{
+    width: 50px;
+}
