@@ -50,4 +50,6 @@ export class ListaAssComponent implements OnInit {
     window.location.reload
   }
 
+
+
 }

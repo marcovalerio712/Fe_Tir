@@ -11,6 +11,7 @@ import { TimbraturaComponent } from './timbratura/timbratura.component';
 import { ListaAssComponent } from './lista-ass/lista-ass.component';
 import { TirComponent } from './tir/tir.component';
 import { ListaConComponent } from './lista-con/lista-con.component';
+import { HomeComponent } from './home/home.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'Home', pathMatch:'full' },
@@ -26,7 +27,9 @@ const routes: Routes = [
   { path: 'tir', component: TirComponent},
 
 
-  
+
+
+
   { path: 'lista-con', component: ListaConComponent}
 ];
 

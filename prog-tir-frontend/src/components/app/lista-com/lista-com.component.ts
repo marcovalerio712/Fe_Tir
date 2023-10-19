@@ -1,5 +1,6 @@
 import { DatePipe } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
+import { Assegnazione } from 'src/models/assegnazione';
 import { Commessa } from 'src/models/commessa';
 import { CommessaService } from 'src/service/CommessaService/commessa.service';
 
@@ -10,6 +11,7 @@ import { CommessaService } from 'src/service/CommessaService/commessa.service';
 })
 export class ListaComComponent implements OnInit{
   commesse?: any[];
+  assegnazione?: any[];
   showPopup: boolean = false;
   updateComm: Commessa = new Commessa;
   
@@ -55,7 +57,7 @@ export class ListaComComponent implements OnInit{
     })
      window.location.reload
   }
+ 
+  }
   
-  
-}
 

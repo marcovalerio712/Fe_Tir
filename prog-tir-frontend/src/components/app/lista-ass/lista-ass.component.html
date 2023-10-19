@@ -1,36 +1,39 @@
 
-<h1>Assegnazioni</h1>
+<h1>Assegnazioni attive</h1>
 
-<div class="table-container">
-<table>
-
-  <thead>
-    <td>ID</td>
-    <td>Commessa</td>
-    <td>Competenza</td>
-    <td>Dipendente</td>
-    <td>Attiva</td>
-  </thead>
-
-  <tbody>
-    <tr *ngFor="let assegnazione of assegnazioni">
-      <td>{{assegnazione.id}}</td>
-      <td>{{assegnazione.commessa.id}}</td>
-      <td>{{assegnazione.competenza}}</td>
-      <td>{{assegnazione.dipendente.cognome}}</td>
-      <td>{{assegnazione.attivo ? 'Attivo' : 'Conclusa'}}</td>
-      <td id="btn"><button (click)="openPopupUpdate(assegnazione)" class="modifica"><img src="assets/images/modifica.png" alt="matita di modifica"> </button> 
-      <button (click)="deleteAss(assegnazione)" class="elimina">x</button> </td>
-
-      
-    </tr>
-  </tbody>
-
-
-</table> 
-
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <h1>COMMESSA</h1>
+      <p>Nome Cliente</p>
+    </div>
+    <div class="flip-card-back">
+      <h2>DETTAGLI</h2>
+      <h4>La tua competenza:</h4>
+      <h4>Tipo</h4>
+      <h4>Descrizione</h4>
+      <h4>Data inizio-fine:</h4>
+      <h4>Durata:</h4>
+      <button class="task">Task</button>
+    </div>
+  </div>
 </div>
 
-<ng-container *ngIf="showPopupUpdate">
-  <app-update-ass [assegnazione]="updatedAss" (closePopup)="closePopupUpdate()" ></app-update-ass>
-</ng-container>
+<h1>Assegnazioni inattive</h1>
+<div class="table">
+  <table>
+    <thead>
+      <td>Dipendente</td>
+      <td>Commessa</td>
+      <td>Competenza</td>
+
+    </thead>
+    <tbody>
+      <tr *ngFor="let assegnazione of assegnazioni">
+        <td>{{assegnazione.dipendente.cognome}}</td>
+        <td>{{assegnazione.commessa.id}}</td>
+        <td>{{assegnazione.competenza}}</td>
+
+      </tr>
+    </tbody>
+
