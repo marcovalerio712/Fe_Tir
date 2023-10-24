@@ -5,7 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { FormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { ListaDipComponent } from './lista-dip/lista-dip.component';
 import { RegistrazioneComponent } from './registrazione/registrazione.component';
 import { UpdateDipComponent } from './update-dip/update-dip.component';
@@ -22,6 +22,7 @@ import { ListaAssComponent } from './lista-ass/lista-ass.component';
 import { UpdateAssComponent } from './update-ass/update-ass.component';
 import { TirComponent } from './tir/tir.component';
 import { ListaConComponent } from './lista-con/lista-con.component';
+import { AuthInterceptor } from './login/interceptor';
 
 
 @NgModule({
@@ -54,7 +55,7 @@ import { ListaConComponent } from './lista-con/lista-con.component';
     FormsModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [ { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true },],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

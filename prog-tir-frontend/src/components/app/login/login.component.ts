@@ -1,3 +1,4 @@
+import { Token } from '@angular/compiler';
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { Dipendente } from 'src/models/dipendente';
@@ -21,8 +22,11 @@ export class LoginComponent {
     };
 
     this.dipendenteService.login(credentials).subscribe(response => {
-      console.log(credentials)
-      console.log('Risposta dal server:', response);
+      if (response && response.token) { // Verifica che la risposta contenga un token
+        sessionStorage.setItem('authToken', response.token);
+        console.log(response)
+        this.router.navigate(['/Home']); 
+      }
 
     });
   }
