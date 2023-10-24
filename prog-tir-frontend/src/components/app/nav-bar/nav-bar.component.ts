@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Dipendente } from 'src/models/dipendente';
+import { Ruolo } from 'src/models/ruolo';
 
 @Component({
   selector: 'app-nav-bar',
@@ -6,10 +8,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./nav-bar.component.css']
 })
 export class NavBarComponent {
-  ruolo: string = 'HR';
-  ruolo1: string = 'PM';
-  ruolo2: string = 'JUNIOR';
-  ruolo3: string = 'MIDDLE';
-  ruolo4: string = 'SENOR';
+  dipendente: Dipendente[] = [];
+  ruolo: Ruolo[] = [];
+
+
 
 }
