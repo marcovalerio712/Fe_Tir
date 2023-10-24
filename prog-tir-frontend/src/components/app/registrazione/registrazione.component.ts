@@ -17,6 +17,7 @@ listaRuoli: any;
 
   onSubmit() {
     this.dipendenteService.registerDipendente(this.dipendente).subscribe(response => {
+      this.router.navigate(['/login']); // localhost:4200/Login
       console.log('Risposta dal server:', response);
     });
   }

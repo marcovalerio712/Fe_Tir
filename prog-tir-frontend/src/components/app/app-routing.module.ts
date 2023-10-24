@@ -15,6 +15,7 @@ import { HomeComponent } from './home/home.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'Home', pathMatch:'full' },
+  { path: 'Home', component:HomeComponent },
   { path: 'login', component: LoginComponent },
   { path: 'lista-dip', component: ListaDipComponent },
   { path: 'registration', component: RegistrazioneComponent },
