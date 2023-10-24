@@ -8,6 +8,7 @@ import { HttpClient } from '@angular/common/http';
 export class DipendenteService {
 
   private baseUrl = 'http://localhost:8080/api/dipendente'; 
+  private authUrl ='http://localhost:8080/api/auth'; 
 
   constructor(private http: HttpClient) {}
 
@@ -20,7 +21,7 @@ export class DipendenteService {
   }
 
   registerDipendente(dip: any): Observable<any> {
-    return this.http.post<any>(`${this.baseUrl}`, dip);
+    return this.http.post<any>(`${this.authUrl}/registrazione`, dip);
   }
 
 
@@ -33,7 +34,7 @@ export class DipendenteService {
   }
   login(credentials: any): Observable<any> {
     // Esegui la richiesta HTTP di login al server Java
-    return this.http.post<any>(`${this.baseUrl}/login`, credentials);
+    return this.http.post<any>(`${this.authUrl}/login`, credentials);
   }
 
   confirmRegistration(token: string): Observable<any>{
