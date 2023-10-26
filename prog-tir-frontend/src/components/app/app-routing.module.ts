@@ -15,7 +15,7 @@ import { HomeComponent } from './home/home.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'Home', pathMatch:'full' },
-  { path: 'Home', component:HomeComponent },
+  { path: 'home', component:HomeComponent },
   { path: 'login', component: LoginComponent },
   { path: 'lista-dip', component: ListaDipComponent },
   { path: 'registration', component: RegistrazioneComponent },
@@ -26,11 +26,6 @@ const routes: Routes = [
   { path: 'timbratura', component: TimbraturaComponent},
   { path: 'lista-ass', component: ListaAssComponent},
   { path: 'tir', component: TirComponent},
-
-
-
-
-
   { path: 'lista-con', component: ListaConComponent}
 ];
 

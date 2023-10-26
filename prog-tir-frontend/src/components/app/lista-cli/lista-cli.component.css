@@ -46,11 +46,9 @@ button{
     width: 30px;
     cursor: pointer;
     font-size: medium;
+    margin-left: 5px;
 }
-button.elimina{
-   margin-left: 5px;
-    
-}
+
 
 .elimina:hover{
 background-color: #a71e1e;

@@ -39,6 +39,7 @@ td{
 
 button{
     color: white;
+    margin-left: 5px;
     background-color: #131d72;
     border: none;
     border-radius: 3px;
@@ -46,11 +47,9 @@ button{
     width: 30px;
     cursor: pointer;
     font-size: medium;
+
 }
-button.elimina{
-   margin-left: 5px;
-    
-}
+
 
 .elimina:hover{
 background-color: #a71e1e;
