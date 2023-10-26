@@ -1,0 +1,143 @@
+.flip-card {
+    background-color: transparent;
+    width: 250px;
+    height: 350px;
+    perspective: 1000px; 
+    margin: auto;
+  }
+  
+  
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+  
+  
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+  
+  
+  .flip-card-front {
+    background-color: #00499881;
+    color: white;
+    border-radius: 10px;
+  }
+  
+  
+  .flip-card-back {
+    background-color: #f0f0f0;
+    color: black;
+    transform: rotateY(180deg);
+    border-radius: 10px;
+  }
+  
+  .task{
+    width:50px;
+    height:30px;
+    background-color: #131d72;
+      color: #fff;
+  
+      border: none;
+      border-radius: 100px;
+      cursor: pointer;
+      transition: transform 0.2s;
+  }
+  
+  .task:hover {
+    transform: scale(1.05);
+    background-color: #0067d5;
+  }
+  
+     
+  h1{
+      text-align: center;
+  }
+  .table-container {
+      margin: auto;
+      width: 80%;
+      overflow-x: auto
+    }
+  table{
+      margin: auto;
+      font-size: large;
+      width: 80%;
+      border-collapse: collapse;
+      border-spacing: 0;
+      overflow-x: auto;
+  }
+  
+  thead{
+      background-color:transparent;
+      font-weight: bold;
+      font-size: larger;
+      text-align: center;
+  }
+  
+  tbody{
+      background-color:#ffffff;
+  }
+  
+  td{
+      border: 2px solid white;
+      padding: 8px;
+      text-align: center;
+      white-space: nowrap; /* Evita la rottura automatica del testo */
+      overflow: hidden;
+      text-overflow: ellipsis; /* Aggiunge ellissi (...) per il testo troppo lungo */
+  }
+  
+  button{
+      color: white;
+      background-color: #131d72;
+      border: none;
+      border-radius: 3px;
+      height: 30px;
+      width: 30px;
+      cursor: pointer;
+      font-size: medium;
+  }
+  button.elimina{
+     margin-left: 5px;
+      
+  }
+  
+  .elimina:hover{
+  background-color: #a71e1e;
+  border: 3px double #ffd2d2;
+  
+  }
+  .modifica:hover{
+      background-color: #1ea0a7;
+      border: 3px double #7ebec2;
+      }
+      .aggiungi:hover{
+          background-color: #1ea74c;
+          border: 3px double #78af8a;
+      
+          }
+  
+  img{
+      height: 15px;
+      width: 15px;
+      filter: brightness(500%);
+  
+  }
+  
+  #btn{
+      width: 50px;
+  }
+  

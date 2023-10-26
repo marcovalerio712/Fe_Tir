@@ -12,6 +12,7 @@ import { ListaAssComponent } from './lista-ass/lista-ass.component';
 import { TirComponent } from './tir/tir.component';
 import { ListaConComponent } from './lista-con/lista-con.component';
 import { HomeComponent } from './home/home.component';
+import { AssDipComponent } from './ass-dip/ass-dip.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'Home', pathMatch:'full' },
@@ -26,7 +27,8 @@ const routes: Routes = [
   { path: 'timbratura', component: TimbraturaComponent},
   { path: 'lista-ass', component: ListaAssComponent},
   { path: 'tir', component: TirComponent},
-  { path: 'lista-con', component: ListaConComponent}
+  { path: 'lista-con', component: ListaConComponent},
+  { path: 'ass', component: AssDipComponent},
 ];
 
 @NgModule({

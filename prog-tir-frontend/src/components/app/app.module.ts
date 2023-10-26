@@ -23,6 +23,7 @@ import { UpdateAssComponent } from './update-ass/update-ass.component';
 import { TirComponent } from './tir/tir.component';
 import { ListaConComponent } from './lista-con/lista-con.component';
 import { AuthInterceptor } from './login/interceptor';
+import { AssDipComponent } from './ass-dip/ass-dip.component';
 
 
 @NgModule({
@@ -48,6 +49,7 @@ import { AuthInterceptor } from './login/interceptor';
 
     
     ListaConComponent,
+              AssDipComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,25 +1,30 @@
 
 <h1>Assegnazioni attive</h1>
 
-<div class="flip-card">
-  <div class="flip-card-inner">
-    <div class="flip-card-front">
-      <h1>COMMESSA</h1>
-      <p>Nome Cliente</p>
-    </div>
-    <div class="flip-card-back">
-      <h2>DETTAGLI</h2>
-      <h4>La tua competenza:</h4>
-      <h4>Tipo</h4>
-      <h4>Descrizione</h4>
-      <h4>Data inizio-fine:</h4>
-      <h4>Durata:</h4>
-      <button class="task">Task</button>
-    </div>
-  </div>
+<div class="table">
+  <table>
+    <thead>
+      <td>Dipendente</td>
+      <td>Commessa</td>
+      <td>Competenza</td>
+
+    </thead>
+    <tbody>
+      <tr *ngFor="let assegnazione of assegnazioni">
+        <td>{{assegnazione.dipendente.cognome}}</td>
+        <td>{{assegnazione.commessa.cliente}}</td>
+        <td>{{assegnazione.competenza}}</td>
+
+      </tr>
+    </tbody>
+</table>
 </div>
 
+
 <h1>Assegnazioni inattive</h1>
+
+
+
 <div class="table">
   <table>
     <thead>
@@ -37,3 +42,5 @@
       </tr>
     </tbody>
 
+  </table>
+</div>

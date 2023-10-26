@@ -19,14 +19,25 @@ export class TimbraturaComponent implements OnInit {
 
 
   constructor(private timbratura: TimbraturaService) { }
+  ngOnInit() {
 
-  ngOnInit(): void {
+ this.timbratura.getAllConsuntivi() 
+    .subscribe(
+      data => {
+        // La risposta della richiesta HTTP è contenuta in 'data'
+        this.consuntivi = data; // Assegna i dati ricevuti alla variabile 'dipendenti'
+        console.log(this.consuntivi);
+      }
+    );
+
     this.updateOrario(); // Chiamata iniziale
     this.timer = setInterval(() => {
       this.updateOrario(); // Aggiorna l'orario ogni secondo
     }, 1000);
+  
+  
 
-   
+
   }
 
   ngOnDestroy(): void {
