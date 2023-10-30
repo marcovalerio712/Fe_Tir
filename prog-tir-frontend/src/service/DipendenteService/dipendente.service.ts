@@ -38,7 +38,7 @@ export class DipendenteService {
   }
 
   confirmRegistration(token: string): Observable<any>{
-    return this.http.post<any>(`${this.baseUrl}/confirm/${token}`, null);
+    return this.http.post<any>(`${this.authUrl}/confirm/${token}`, null);
   }
   
 }
