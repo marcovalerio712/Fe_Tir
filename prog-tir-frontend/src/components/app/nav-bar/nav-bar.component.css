@@ -19,6 +19,7 @@ nav a{
 nav a:hover{
     color: #e5ecff;
     text-shadow: 2px 2px 6px #131d72; 
+    cursor: pointer;
 
 
 }

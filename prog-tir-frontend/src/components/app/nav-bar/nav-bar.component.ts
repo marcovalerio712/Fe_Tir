@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Dipendente } from 'src/models/dipendente';
 import { Ruolo } from 'src/models/ruolo';
 
@@ -7,9 +7,21 @@ import { Ruolo } from 'src/models/ruolo';
   templateUrl: './nav-bar.component.html',
   styleUrls: ['./nav-bar.component.css']
 })
-export class NavBarComponent {
-  dipendente: Dipendente[] = [];
+export class NavBarComponent implements OnInit{
+dipendente: Dipendente[] = [];
   ruolo: Ruolo[] = [];
+
+  ngOnInit(): void {
+  
+  
+
+
+  }
+  
+  logout(): void {
+     
+      window.location.replace('login');
+    }
 
 
 

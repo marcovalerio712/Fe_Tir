@@ -25,7 +25,7 @@ export class LoginComponent {
       if (response && response.token) { // Verifica che la risposta contenga un token
         sessionStorage.setItem('authToken', response.token);
         console.log(response)
-        this.router.navigate(['/Home']); 
+        this.router.navigate(['/home']); 
       }
 
     });
