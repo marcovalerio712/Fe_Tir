@@ -19,7 +19,8 @@ dipendente: Dipendente[] = [];
   }
   
   logout(): void {
-     
+     sessionStorage.removeItem("authToken");
+     sessionStorage.removeItem("dipendente");
       window.location.replace('login');
     }
 

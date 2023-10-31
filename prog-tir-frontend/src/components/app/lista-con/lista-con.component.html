@@ -11,12 +11,11 @@
     <td>Dipendente</td>
   </thead>
 
-  <!-- federico è un coglione -->
   <tbody>
     <tr *ngFor="let consuntivo of consuntivi!.reverse()">
       <td>{{consuntivo.id}}</td>
-      <td>{{consuntivo.orarioInizio}}</td>
-      <td>{{consuntivo.orarioFine }}</td>
+      <td>{{consuntivo.orarioInizio | date:'dd/MM/yyyy'}}</td>
+      <td>{{consuntivo.orarioFine | date:'dd/MM/yyyy'}}</td>
       <td>{{consuntivo.tipologia}}</td>
       <td>{{consuntivo.dipendente.nome}}</td>
       

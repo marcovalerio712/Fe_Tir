@@ -11,7 +11,7 @@
             <label for="email">Email <br> <input name="email" type="email" readonly [(ngModel)]="dipendente!.email" value="{{dipendente?.email}}"></label><br>
             <label for="telefono"> Telefono <br> <input name="telefono" type="text" required [(ngModel)]="dipendente!.telefono" value="{{dipendente?.telefono}}"></label><br>
             <label for="ruolo">Ruolo<br>
-                <select name="ruolo">
+                <select [(ngModel)]="dipendente!.ruolo" name="ruolo">
                     <ng-container *ngFor="let ruolo of listaRuoli">
                     <option [ngValue]="ruolo" >{{ruolo.anzianita}}</option>               
                     </ng-container>

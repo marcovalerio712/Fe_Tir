@@ -4,8 +4,8 @@
       <div class="card">
         <h2>TIMBRATURA</h2>
         <div class="orario" id="orario">{{ currentDateTime }}</div>
-        <button class="entrata" (click)="regitraEntrata()">Entrata</button>
-        <button class="uscita" (click)="regitraUscita()">Uscita</button><br>
+        <button class="entrata" (click)="registraEntrata()">Entrata</button>
+        <button class="uscita" (click)="registraUscita()">Uscita</button><br>
       
     </div>
       <div class="consuntivo-card">
@@ -44,20 +44,6 @@
     <div class="right-side">
   
       <app-lista-con></app-lista-con>
-       <div class="consuntivi-list">
-   
-    <ul>
-      <li *ngFor="let consuntivo of consuntivi">
-        <!-- Visualizza i dettagli del consuntivo -->
-        {{ consuntivo.id }}
-        {{ consuntivo.orarioInizio }}
-        {{ consuntivo.orarioFine }}
-        {{ consuntivo. tipologia }}
-        {{ consuntivo.dipendente }}
-        <!-- Sostituisci 'nomeCampo' con il nome del campo effettivo nel tuo oggetto consuntivo -->
-      </li>
-    </ul>
-  </div>
     </div>
   </div>
   

@@ -7,7 +7,7 @@ import { Consuntivo } from 'src/models/consuntivo';
   styleUrls: ['./timbratura.component.css']
 })
 export class TimbraturaComponent implements OnInit {
-
+  current? : Date;
   currentDateTime: string = '';
   selectedType: string = '';
   startDate: string = '';
@@ -16,12 +16,13 @@ export class TimbraturaComponent implements OnInit {
   endTime: string = '';
   consuntivi:any[] = [];
   private timer: any;
+  timbratura?: Consuntivo;
 
 
-  constructor(private timbratura: TimbraturaService) { }
+  constructor(private timbraturaService: TimbraturaService) { }
   ngOnInit() {
 
- this.timbratura.getAllConsuntivi() 
+ this.timbraturaService.getAllConsuntivi() 
     .subscribe(
       data => {
         // La risposta della richiesta HTTP è contenuta in 'data'
@@ -34,10 +35,6 @@ export class TimbraturaComponent implements OnInit {
     this.timer = setInterval(() => {
       this.updateOrario(); // Aggiorna l'orario ogni secondo
     }, 1000);
-  
-  
-
-
   }
 
   ngOnDestroy(): void {
@@ -53,12 +50,20 @@ export class TimbraturaComponent implements OnInit {
   }
   
 
-  regitraEntrata(): void {
-    
-    console.log('Orario di entrata registrato');
+  registraEntrata(): void {
+    this.timbratura = new Consuntivo();
+    this.current = new Date();
+    this.timbratura.orarioInizio = this.current;
+    this.timbraturaService!.createConsuntivo(this.timbratura).subscribe({
+      next: data => {
+        console.log(data)
+        window.location.reload()
+      },
+
+    })
   }
 
-  regitraUscita(): void {
+  registraUscita(): void {
     console.log('Orario di uscita registrato');
   }
 }

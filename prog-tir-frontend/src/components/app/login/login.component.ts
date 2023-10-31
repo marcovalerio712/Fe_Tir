@@ -22,8 +22,10 @@ export class LoginComponent {
     };
 
     this.dipendenteService.login(credentials).subscribe(response => {
-      if (response && response.token) { // Verifica che la risposta contenga un token
+      console.log(response)
+      if (response && response.token) { 
         sessionStorage.setItem('authToken', response.token);
+        sessionStorage.setItem('dipendente', JSON.stringify(response.dipendente))
         console.log(response)
         this.router.navigate(['/home']); 
       }

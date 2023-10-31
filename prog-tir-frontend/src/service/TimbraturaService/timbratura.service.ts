@@ -15,11 +15,13 @@ export class TimbraturaService {
   }
 
   getAllConsuntivi(): Observable<any[]> {
+    return this.http.get<any[]>(`${this.baseUrl}/all`);
+  }
+  getMyConsuntivi(): Observable<any[]> {
     return this.http.get<any[]>(`${this.baseUrl}/my`);
   }
-
   createConsuntivo(con: any): Observable<Consuntivo> {
-    return this.http.post<any>(`${this.baseUrl}`, con);
+    return this.http.post<any>(`${this.baseUrl}/insert`, con);
   }
 
   updateConsuntivo(con: any): Observable<Consuntivo> {
